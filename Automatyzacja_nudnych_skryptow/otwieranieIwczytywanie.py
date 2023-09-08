@@ -2,10 +2,10 @@
 
 def otwieranie_i_wczytywanie():
     
-    plik = open('tekst.txt', 'r')
+    with open("\tekst.txt", "r") as plik:
 
-    tekst = plik.read()
+        tekst = plik.read()
+        return tekst
 
-    return tekst
-
+print(otwieranie_i_wczytywanie())
 
