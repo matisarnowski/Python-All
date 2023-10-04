@@ -11,7 +11,7 @@ Napisz program, który na podstawie listy Kolo wydrukuje następującą 'grafik�
 [6] 1
 -2 [7]
 """
-Kolo = [-3,7,2,0,5,1,-2]
+Kolo = [-3, 7, 2, 0, 5, 1, -2]
 
 j = 1
 for i in Kolo:
@@ -20,7 +20,7 @@ for i in Kolo:
     else:
         print("[" + str(j) + "] " + str(i))
     j += 1
-    
+
 """
 Zadanie 2.
 Poniższy program generuje tablicę, której elementami są 
@@ -34,16 +34,17 @@ Uzupełnij kod programu, aby uzyskać następujący efekt:
 -program zlicza i podaje ilość wystąpień liczby 2
 """
 from random import randint
+
 tablica = []
 for i in range(100):
-    tablica.append(randint(1,5))
+    tablica.append(randint(1, 5))
 total_2 = 0
 total_tab_2 = 0
 for j in tablica:
     if j == 2:
         total_2 += 1
         total_tab_2 += j
- 
+
 print("Wystąpień liczby 2:", total_2, "Suma wystąpień liczby 2:", total_tab_2)
 
 """
@@ -90,7 +91,9 @@ elif number < 0:
         a = ujemna
         b = nie_jest
         c = three
-print("Liczba " + str(number) + " jest " + a + " i " + b + " podzielna przez " + c + ".")
+print(
+    "Liczba " + str(number) + " jest " + a + " i " + b + " podzielna przez " + c + "."
+)
 
 """
 Zadanie 4.
@@ -108,7 +111,11 @@ kcal = float(masa) * float(kilometry)
 prog = ""
 if kcal >= 1500:
     prog = "Uwaga - pamiętaj o nawodnieniu organizmu"
-print("Masa ciała {}, ilość przebiegniętych kilomterów {}, ilość spalonych kalorii {}.\n{}".format(masa, kilometry, kcal, prog))
+print(
+    "Masa ciała {}, ilość przebiegniętych kilomterów {}, ilość spalonych kalorii {}.\n{}".format(
+        masa, kilometry, kcal, prog
+    )
+)
 
 """
 Zadanie 5. (numer albumu parzysty)
@@ -124,6 +131,6 @@ xxxx
 number = int(input("Podaj liczbę > 2: "))
 for i in range(0, number):
     if not (i == 0 or i == number - 1):
-        print("x"+(number-2)*"o"+"x")
+        print("x" + (number - 2) * "o" + "x")
     else:
-        print(number*"x")
+        print(number * "x")

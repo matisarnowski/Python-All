@@ -7,7 +7,7 @@ while True:
     if n > 1:
         break
 for i in range(0, n):
-    print(" " + n*"*")
+    print(" " + n * "*")
 k = n + 2
 for i in range(0, k):
-    print(i*" " + (k - 2*i)*"*")
+    print(i * " " + (k - 2 * i) * "*")

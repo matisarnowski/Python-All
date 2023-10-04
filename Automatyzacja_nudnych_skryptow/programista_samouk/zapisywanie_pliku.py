@@ -9,7 +9,7 @@ with open("st.txt", "r") as f:
 with open("st.txt", "w") as f:
     my_text = ""
     for i in my_list:
-        my_text = my_text + i + '\n'
+        my_text = my_text + i + "\n"
     f.write(my_text + "Cześć zapisano z Pythona.")
 
 with open("st.txt", "r") as f:

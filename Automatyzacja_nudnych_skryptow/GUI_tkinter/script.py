@@ -3,7 +3,7 @@ import tkinter as tk
 
 root = tk.Tk()
 
-label = tk.Label(root, text = "Kocham Mame!")
+label = tk.Label(root, text="Kocham Mame!")
 
 label.pack()
 

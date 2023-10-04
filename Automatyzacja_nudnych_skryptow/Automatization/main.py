@@ -7,7 +7,7 @@ from openpyxl import Workbook
 
 wb = Workbook()
 ws = wb.active
-sheet = openpyxl.load_workbook(os.path.join(os.getcwd(), 'example.xlsx'))
+sheet = openpyxl.load_workbook(os.path.join(os.getcwd(), "example.xlsx"))
 Sheet1 = sheet["Sheet1"]
 
 list_with_cells = []
@@ -26,8 +26,8 @@ for row in list_with_cells:
 chart = BarChart(type="col")
 chart.type = "col"
 chart.title = "Ilość owoców na targu."
-chart.y_axis.title = 'Sztuk'
-chart.x_axis.title = 'Owoc'
+chart.y_axis.title = "Sztuk"
+chart.x_axis.title = "Owoc"
 chart.legend = None
 
 data = Reference(ws, min_col=3, min_row=2, max_row=8, max_col=3)

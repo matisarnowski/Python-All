@@ -1,7 +1,8 @@
 import os
 
-class MyCalculate():
-    def __init__(self, suma:int = 0, path = os.getcwd()) -> None:
+
+class MyCalculate:
+    def __init__(self, suma: int = 0, path=os.getcwd()) -> None:
         self.suma = suma
         self.path = path
 

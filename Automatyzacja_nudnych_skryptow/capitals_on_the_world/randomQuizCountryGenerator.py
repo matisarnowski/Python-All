@@ -9,19 +9,19 @@ def random_quiz_country():
     correct_answer = list()
     correct_country = list()
     final_city = list()
-    with open(os.path.join(os.getcwd(), "country-capital-city.json"), 'r') as f_json:
+    with open(os.path.join(os.getcwd(), "country-capital-city.json"), "r") as f_json:
         contents = json.load(f_json)
         # print(contents)
         letter = "ABCD"
         for i in range(0, len(contents)):
             all_city = list()
-            correct_city = contents[i]['city']
+            correct_city = contents[i]["city"]
             # print(correct_city)
-            country = contents[i]['country']
+            country = contents[i]["country"]
             # print(correct_country)
             for j in range(3):
-                rand_int = random.randint(0, len(contents)-1)
-                city = contents[rand_int]['city']
+                rand_int = random.randint(0, len(contents) - 1)
+                city = contents[rand_int]["city"]
                 # print(city)
                 all_city.append(city)
                 # print(all_city)
@@ -45,11 +45,13 @@ def play_total():
     my_set = random_quiz_country()
     print(my_set)
     for i, j, k in zip(my_set[0], my_set[1], my_set[2]):
-        print(f'Dla kraju: {i}, stolicą jest: \n {k}.')
-        capital = input('Podaj A, B, C lub D. Każda inna odpowiedź będzie błędna. \n Z to wyjście z programu.')
+        print(f"Dla kraju: {i}, stolicą jest: \n {k}.")
+        capital = input(
+            "Podaj A, B, C lub D. Każda inna odpowiedź będzie błędna. \n Z to wyjście z programu."
+        )
         if capital == j:
             total += 1
-        elif capital == 'Z':
+        elif capital == "Z":
             break
         else:
             continue

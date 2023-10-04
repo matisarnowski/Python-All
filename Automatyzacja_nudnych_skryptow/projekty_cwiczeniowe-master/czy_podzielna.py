@@ -1,5 +1,8 @@
 import sys
-print("Liczba podzielna - liczba naturalna, która jest większa od 0 i dzieli się przez sumę swoich cyfr.")
+
+print(
+    "Liczba podzielna - liczba naturalna, która jest większa od 0 i dzieli się przez sumę swoich cyfr."
+)
 
 licz = int(input("Wprowadź liczbę do sprawdzenia. "))
 
@@ -20,4 +23,3 @@ if licz > 0:
 else:
     print("liczba mniejsz od jednośc, nie może być liczbą podzielną. ")
     sys.exit()
-

@@ -1,12 +1,12 @@
-#!/usr/bin/python3    
+#!/usr/bin/python3
 import re
 import os
-     
-path = os.path.join('/home/mateusz/Dokumenty/')
-file_searching_pdf = re.compile(r'pdf?')
-file_searching_jpg = re.compile(r'jpg?')
-file_searching_txt = re.compile(r'txt?')
-    
+
+path = os.path.join("/home/mateusz/Dokumenty/")
+file_searching_pdf = re.compile(r"pdf?")
+file_searching_jpg = re.compile(r"jpg?")
+file_searching_txt = re.compile(r"txt?")
+
 lista_pdf = []
 lista_jpg = []
 lista_txt = []
@@ -34,6 +34,6 @@ for foldery, podfoldery, pliki in os.walk(path):
             txt += 1
 for l in lista_txt:
     print(l)
-print('Znaleziono: %d plików z rozszezrzeniem pdf.'%pdf)
-print('Znaleziono: %d plików z rozszezrzeniem jpg.'%jpg)
-print('Znaleziono: %d plików z rozszezrzeniem txt.'%txt)
+print("Znaleziono: %d plików z rozszezrzeniem pdf." % pdf)
+print("Znaleziono: %d plików z rozszezrzeniem jpg." % jpg)
+print("Znaleziono: %d plików z rozszezrzeniem txt." % txt)

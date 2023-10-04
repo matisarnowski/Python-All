@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
-def potega (x):
+
+def potega(x):
     liczba = 2**x
     return liczba
 
-def formowanie_TABLICY (liczba):
+
+def formowanie_TABLICY(liczba):
     for i in range(1, liczba):
         y = i
         tab = []
@@ -16,8 +18,9 @@ def formowanie_TABLICY (liczba):
             z = z + 1
         print(i + 1, tab)
 
+
 x = int(input())
 
 liczba = potega(x)
 print("0 Zbiór pusty")
-formowanie_TABLICY(liczba)       
+formowanie_TABLICY(liczba)

@@ -1,6 +1,7 @@
 from cgi import print_exception
 import csv
 
+
 class Item:
     pay_rate = 0.8
     all = []
@@ -28,7 +29,7 @@ class Item:
     def name(self, value):
         if len(value) > 10:
             raise Exception("The name is too long...")
-        else: 
+        else:
             self.__name = value
 
     @property
@@ -54,8 +55,8 @@ class Item:
 
     @classmethod
     def instance_from_csv(cls):
-        with open("ExampleClass/OOP_with_freeCodeCamp/items.csv", 'r') as f:
-            reader =  csv.DictReader(f)
+        with open("ExampleClass/OOP_with_freeCodeCamp/items.csv", "r") as f:
+            reader = csv.DictReader(f)
             items = list(reader)
 
         for item in items:
@@ -63,13 +64,15 @@ class Item:
 
         for item in items:
             Item(
-                name = item.get("name"), 
-                price = float(item.get("price")),
-                quantity = int(item.get("quantity"))
-            )   
+                name=item.get("name"),
+                price=float(item.get("price")),
+                quantity=int(item.get("quantity")),
+            )
 
     def __repr__(self):
-        return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity})"
+        return (
+            f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity})"
+        )
 
     @staticmethod
     def is_integer(num):
@@ -88,7 +91,7 @@ class Item:
         We have {self.name} {self.quantity} times.py
         Regards, Mateusz Sarnowski
         """
-    
+
     def __send(self):
         pass
 
@@ -97,16 +100,17 @@ class Item:
         self.__prepare_body()
         self.__send()
 
-#Item.instance_from_csv()
-#print(Item.all)
+
+# Item.instance_from_csv()
+# print(Item.all)
 """for instance in Item.all:
     print(f"Item name is: {instance.name}, price of item is: {instance.price}, and quantity this item is {instance.quantity}.")"""
 
-#print(Item.is_integer(7.0))
-#print(Item.is_integer(7.5))
-#print(Item.is_integer(7.0))
-#print(Item.is_integer(7))
-#print(Item.is_integer("seven"))
+# print(Item.is_integer(7.0))
+# print(Item.is_integer(7.5))
+# print(Item.is_integer(7.0))
+# print(Item.is_integer(7))
+# print(Item.is_integer("seven"))
 
 """phone1 = Phone("jscPhonev10", 500, 5, 1)
 print(phone1.calculate_total_price())

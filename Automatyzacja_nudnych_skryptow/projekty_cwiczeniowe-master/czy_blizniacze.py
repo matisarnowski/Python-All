@@ -1,6 +1,7 @@
 from math import sqrt
 
-def czy_pierwsza (a):
+
+def czy_pierwsza(a):
     licznik = 0
     ogr = sqrt(a)
     ogr = int(ogr)
@@ -9,6 +10,7 @@ def czy_pierwsza (a):
         if a % i == 0:
             licznik += 1
     return licznik
+
 
 print("Liczby bliźniacze - takie dwie liczby pierwsze, których różnica wynosi 2. ")
 
@@ -19,9 +21,21 @@ roznica = 0
 if czy_pierwsza(licz_a) == 0 and czy_pierwsza(licz_b) == 0:
     roznica = abs(licz_a - licz_b)
     if roznica == 2:
-        print("Brawo liczby: ", licz_a, " i ", licz_b, " są liczbami bliźniaczymi. Obydwie ponadto są liczbami pierwszymi. ")
+        print(
+            "Brawo liczby: ",
+            licz_a,
+            " i ",
+            licz_b,
+            " są liczbami bliźniaczymi. Obydwie ponadto są liczbami pierwszymi. ",
+        )
     else:
-        print("Niestety liczby ", licz_a, " i ", licz_b, " to liczby pierwsze, ale nie bliźniacze. ")
+        print(
+            "Niestety liczby ",
+            licz_a,
+            " i ",
+            licz_b,
+            " to liczby pierwsze, ale nie bliźniacze. ",
+        )
 elif czy_pierwsza(licz_a) != 0 and czy_pierwsza(licz_b) != 0:
     print("Żadna z tych liczb nie jest liczbą pierwszą. ")
 elif czy_pierwsza(licz_a) != 0 and czy_pierwsza(licz_b) == 0:

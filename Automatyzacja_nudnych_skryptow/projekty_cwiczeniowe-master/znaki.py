@@ -2,6 +2,7 @@
 
 import pprint
 
+
 def zliczanie(message):
     slownik = {}
 
@@ -11,8 +12,9 @@ def zliczanie(message):
 
     return slownik
 
+
 message = input("Podaj dowolnej długości tekst. ")
 
 efekt = zliczanie(message)
 
-pprint.pprint(efekt, width = 1)
+pprint.pprint(efekt, width=1)

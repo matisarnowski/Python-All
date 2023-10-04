@@ -9,7 +9,6 @@ licz = int(input("Podaj liczbę, zostanie sprawdzone, czy jest t liczna Mersene'
 
 p = 0
 if licz % 2 == 1:
-
     spr = licz
 
     while spr > 0:

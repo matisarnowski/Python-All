@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 
-class Customer():
+
+class Customer:
     def __init__(self, name, membership):
         self.name = name
         self.membership = membership
 
-customers = [Customer("Maciej", "Gold"), Customer("Mateusz","Bronze"), Customer("Jakub", "Silver")]
+
+customers = [
+    Customer("Maciej", "Gold"),
+    Customer("Mateusz", "Bronze"),
+    Customer("Jakub", "Silver"),
+]
 
 print("Imona użytkowników, to:")
 for i in range(0, len(customers)):

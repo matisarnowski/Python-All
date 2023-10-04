@@ -1,8 +1,8 @@
 import Lotto
 import UrlLotto
 
-class Comparison():
 
+class Comparison:
     def get_comparison(self, how_much_lines, list_lotto, list_url_lotto):
         bool_lotto = []
         i = 0
@@ -22,7 +22,5 @@ class Comparison():
                 else:
                     return "Brak trafień."
                 k += 1
-                
-                
+
             i += 1
-        

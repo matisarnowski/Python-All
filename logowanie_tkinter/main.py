@@ -11,12 +11,23 @@ def run_app():
         second_text = text_var_password.get()
 
         if os.path.isfile(os.path.join(os.getcwd(), file_name + ".txt")):
-            messagebox.showerror(title="Błąd dodawiania użytkownka.",
-                                 message="Ten użytkownik już istnieje, podaj inną nazwę.")
+            messagebox.showerror(
+                title="Błąd dodawiania użytkownka.",
+                message="Ten użytkownik już istnieje, podaj inną nazwę.",
+            )
         else:
             with open(file_name + ".txt", "w") as file:
-                file.write("Hasło: \n" + second_text + "\n" + "Nazwa użytkownika: \n" + file_name)
-                messagebox.showinfo(title="Dodano użytkownika.", message="Twój nowy użytkownik, to, " + file_name + ".")
+                file.write(
+                    "Hasło: \n"
+                    + second_text
+                    + "\n"
+                    + "Nazwa użytkownika: \n"
+                    + file_name
+                )
+                messagebox.showinfo(
+                    title="Dodano użytkownika.",
+                    message="Twój nowy użytkownik, to, " + file_name + ".",
+                )
 
     main_window.title("Moja aplikacja do logowania.")
     main_window.geometry("590x500")

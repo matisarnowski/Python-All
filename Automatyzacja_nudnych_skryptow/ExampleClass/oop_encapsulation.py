@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-class SoftwareEngineer():
+
+class SoftwareEngineer:
     pass
 
     def __init__(self, name, age):
@@ -24,7 +25,6 @@ class SoftwareEngineer():
         if self._number_of_bug_solved < 100:
             return base_value * 2
         return base_value * 3
-
 
 
 se = SoftwareEngineer("Mateusz", 33)

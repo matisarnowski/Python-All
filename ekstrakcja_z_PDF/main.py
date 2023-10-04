@@ -6,7 +6,11 @@ import PyPDF2
 
 
 def openFile():
-    file_name = filedialog.askopenfilename(title="Otwórz plik PDF.", initialdir=os.getcwd(), filetypes=[("Pliki PDF", "*.pdf")])
+    file_name = filedialog.askopenfilename(
+        title="Otwórz plik PDF.",
+        initialdir=os.getcwd(),
+        filetypes=[("Pliki PDF", "*.pdf")],
+    )
     label_file_name.configure(text=file_name)
     out_of_file_text.delete("1.0", tk.END)
     reader = PyPDF2.PdfReader(file_name)
@@ -15,12 +19,15 @@ def openFile():
         current_text = reader.pages[i].extract_text()
         out_of_file_text.insert(tk.END, current_text)
 
+
 main_window = tk.Tk()
 main_window.title("Ekstrakcja tekstu z pliku PDF.")
 main_window.geometry("500x600")
 main_window.config(bg="#121211")
 
-label_file_name = tk.Label(main_window, text="Nie wybrano żadnego plikiu do ekstrakcji danych.")
+label_file_name = tk.Label(
+    main_window, text="Nie wybrano żadnego plikiu do ekstrakcji danych."
+)
 label_file_name.config(bg="#121211", fg="#33f707", font=("Roboto", 14))
 label_file_name.pack(side=tk.TOP)
 

@@ -2,7 +2,6 @@ import tkinter as tk
 
 
 class Window(tk.Tk):
-
     def __init__(self, parent, parametr):
         self.parametr = parametr
         self.parent = parent
@@ -11,8 +10,7 @@ class Window(tk.Tk):
 
         self.label_text = tk.Label(
             parent,
-            text=
-            "Oto panel do wpisywania parametrów układu równań liniowych pierwszego stopnia. Wpisz parametry, a my wyrysujemy wykres i rozwiązanie."
+            text="Oto panel do wpisywania parametrów układu równań liniowych pierwszego stopnia. Wpisz parametry, a my wyrysujemy wykres i rozwiązanie.",
         )
         self.label_text.grid(row=0, columnspan=5)
 

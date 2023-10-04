@@ -1,10 +1,17 @@
 #! /usr/local/bin/python3
 
-while(True):
-    
+while True:
     try:
-        a = int(input("Podaj pierwszą liczbę całkowitą dla, której wykonamy rozszerzony algorytm Euklidesa: "))
-        b = int(input("Podaj drugą liczbę całkowitą, która będzie dzielnikiem w rozszerzonym algorytmie Euklidesa."))
+        a = int(
+            input(
+                "Podaj pierwszą liczbę całkowitą dla, której wykonamy rozszerzony algorytm Euklidesa: "
+            )
+        )
+        b = int(
+            input(
+                "Podaj drugą liczbę całkowitą, która będzie dzielnikiem w rozszerzonym algorytmie Euklidesa."
+            )
+        )
     except Exception as e:
         print(f"{e}")
         print("Podałeś nie to, co trzeba. ")
@@ -23,18 +30,18 @@ s = 1
 c = new_r = new_p = 0
 
 while b != 0:
-    c = a % b 
-    quot = a//b
+    c = a % b
+    quot = a // b
     a = b
     b = c
-    new_r = p - quot*r
-    new_s = q - quot*s
+    new_r = p - quot * r
+    new_s = q - quot * s
     p = r
     q = s
     r = new_r
     s = new_s
 
-if p < 0 or q < 0:   
-    print(f'NWD({a0},{b0}), to: {a} = {a0}*({p}) + {b0}*({q})')
+if p < 0 or q < 0:
+    print(f"NWD({a0},{b0}), to: {a} = {a0}*({p}) + {b0}*({q})")
 else:
-    print(f'NWD({a0},{b0}), to: {a} = {a0}*{p} + {b0}*{q}')    
+    print(f"NWD({a0},{b0}), to: {a} = {a0}*{p} + {b0}*{q}")

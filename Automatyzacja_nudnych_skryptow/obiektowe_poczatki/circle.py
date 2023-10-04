@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
-class Circle():
+
+class Circle:
     from math import pi as p
 
-    def __init__(self, promien, ludolfina = p):
+    def __init__(self, promien, ludolfina=p):
         self.promien = promien
         self.ludolfina = ludolfina
 

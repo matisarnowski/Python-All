@@ -7,8 +7,8 @@ def play_total():
     my_set = random_quiz_country()
     print(my_set)
     for i, j, k in my_set:
-        print(f'Dla kraju: {k}, stolicą jest: \n {i}.')
-        capital = input('Podaj A, B, C lub D. Każda inna odpowiedź będzie błędna.')
+        print(f"Dla kraju: {k}, stolicą jest: \n {i}.")
+        capital = input("Podaj A, B, C lub D. Każda inna odpowiedź będzie błędna.")
         if capital == j:
             total += 1
     return total

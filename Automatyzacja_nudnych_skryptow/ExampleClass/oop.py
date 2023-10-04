@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-#inherits, override, extend
-class Employee():
 
+# inherits, override, extend
+class Employee:
     def __init__(self, name, age, salary):
         self.name = name
         self.age = age
@@ -11,8 +11,8 @@ class Employee():
     def work(self):
         print(f"{self.name} is working... ")
 
-class SoftwareEngineer(Employee):
 
+class SoftwareEngineer(Employee):
     def __init__(self, name, age, salary, level):
         super().__init__(name, age, salary)
         self.salary = salary
@@ -23,6 +23,7 @@ class SoftwareEngineer(Employee):
     def work(self):
         print(f"{self.name} is coding... ")
 
+
 class Designer(Employee):
     pass
 
@@ -31,6 +32,7 @@ class Designer(Employee):
 
     def work(self):
         print(f"{self.name} is designing... ")
+
 
 se = SoftwareEngineer("Mateusz", 33, 2500, "Junior")
 print(se.name, se.age)
@@ -43,11 +45,15 @@ d.work()
 d.draw()
 
 
-employees = [SoftwareEngineer("Mateusz", 33, 2500, "Junior"),
-Designer("Maciej", 28, 3500)]
+employees = [
+    SoftwareEngineer("Mateusz", 33, 2500, "Junior"),
+    Designer("Maciej", 28, 3500),
+]
+
 
 def employee_motivation(employees):
     for employee in employees:
         employee.work()
+
 
 employee_motivation(employees)

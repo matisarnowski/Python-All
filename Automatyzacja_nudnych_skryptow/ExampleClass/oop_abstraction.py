@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
-class SoftwareEngineer():
+
+class SoftwareEngineer:
     pass
+
     def __init__(self):
         self._value = None
+
     @property
     def salary(self):
         return self._salary
@@ -15,4 +18,3 @@ class SoftwareEngineer():
     @salary.deleter
     def salary(self):
         del self._salary
-

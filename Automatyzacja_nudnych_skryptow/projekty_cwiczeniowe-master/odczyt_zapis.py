@@ -1,4 +1,3 @@
-
 plikzHaslem = open("haslo.txt", "r")
 
 porownanie = plikzHaslem.read()
@@ -8,14 +7,13 @@ porownywane = input("Podaj hasło: ")
 
 print(porownywane)
 print(porownanie)
-if (porownanie == porownywane):
-
+if porownanie == porownywane:
     plik = open("latarnik.txt", "r")
 
     zapis = plik.read()
 
-    print (zapis)
+    print(zapis)
 
     plik.close()
 else:
-    print ("Brak dostępu. ")
+    print("Brak dostępu. ")

@@ -1,9 +1,10 @@
 import math
 import pprint
+
 if __name__ == "__main__":
-    func = lambda x: x*x
+    func = lambda x: x * x
     print(func(121))
-    
+
     main_tab = []
     max_counting = 1
     prime_numbers = 0

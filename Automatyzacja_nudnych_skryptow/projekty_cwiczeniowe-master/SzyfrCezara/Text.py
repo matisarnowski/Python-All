@@ -1,7 +1,8 @@
-class Text():
-
+class Text:
     def get_text(self):
-        text = input("Podaj treść, która zostanie następnie zaszyfrowana szyfrem Cezara. ")
+        text = input(
+            "Podaj treść, która zostanie następnie zaszyfrowana szyfrem Cezara. "
+        )
 
         if len(text) > 0:
             return text

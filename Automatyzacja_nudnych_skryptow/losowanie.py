@@ -22,5 +22,5 @@ while play == "yes":
         print(l)
     given.clear()
     drawn.clear()
-    
+
     play = input("Do you want to play again? (yes/not): ")
