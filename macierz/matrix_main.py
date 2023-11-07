@@ -23,7 +23,7 @@ class Matrix_main:
         shape = (int(math.sqrt(len(self.numbers))), int(math.sqrt(len(self.numbers))))
         if self.is_matrix_square():
             self.matrix = np.array(self.numbers)
-            self.matrix = self.matrix.reshape((shape))
+            self.matrix = self.matrix.reshape(shape)
             return self.matrix
         else:
             self.matrix = []
