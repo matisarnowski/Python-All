@@ -3,15 +3,18 @@
 """W tym projekcie używam modułu json do otwieranai i operowania na plikach json"""
 import json
  
-from typing import Optional, Query
-from fastapi import FastAPI
+from typing import Optional
+from fastapi import FastAPI, Query
 from pydantic import BaseModel
 
 
 app = FastAPI()
 
-"""Moja podstawowa klasa, która będzie tworzyć obiekty do pliku json."""
+
 class Person(BaseModel):
+    """
+    Moja podstawowa klasa, która będzie tworzyć obiekty do pliku json.
+    """
     id: Optional[int] = None
     first_name: str
     last_name: str
